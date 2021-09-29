@@ -15,7 +15,8 @@ public class Solution {
      */
 
     //solution1
-    //O(n^2)
+    // Time complexity: O(n^2)
+    // Space complexity: O(1)
     public static int[] twoSum1(int[] arr, int target) {
         for(int i = 0; i < arr.length; i++) {
             for(int j = i + 1; j < arr.length; j++) {
@@ -28,7 +29,8 @@ public class Solution {
     }
 
     //solution2
-    //O(n)
+    // Time complexity: O(n)
+    // Space complexity: O(n)
     public static int[] twoSum2(int[] arr, int target) {
         //map key: nums, value: nums' indices
         Map<Integer, Integer> map = new HashMap<>();
@@ -53,7 +55,8 @@ public class Solution {
      */
 
     //solution1
-    //O(nlogn)
+    // Time Complexity: O(nlogn)
+    // Space Complexity: O(n)
     public static int minMeetingRooms1(int[][] intervals) {
         int[] starts = new int[intervals.length];
         int[] ends = new int[intervals.length];
@@ -69,7 +72,7 @@ public class Solution {
         int room = 0;
         int endIndex = 0;
         for (int i = 0; i < starts.length; i++) {
-            if (starts[i] < ends[endIndex]) {//???????<
+            if (starts[i] < ends[endIndex]) {
                 room++;
             }else{
                 endIndex++;
@@ -79,7 +82,8 @@ public class Solution {
     }
 
     //solution2
-    //O(nlogn)
+    // Time Complexity: O(nlogn)
+    // Space Complexity: O(n)
     public static int minMeetingRooms2(int[][] intervals) {
         PriorityQueue<Integer> rooms = new PriorityQueue<Integer>();
         //sort starts(ascending)
@@ -105,7 +109,8 @@ public class Solution {
      */
 
     //solution1
-    //O(nlogn)
+    // Time Complexity: O(nlogn)
+    // Space Complexity: O(n)
     public static int[] intersection1(int[] nums1, int[] nums2) {
         int[] longerArray = nums1;
         int[] shorterArray = nums2;
@@ -133,9 +138,9 @@ public class Solution {
 
         return res;
     }
-    //binary search
+
     //if we find target, will be true
-    public static boolean binarySearch(int target, int[] nums) {
+    private static boolean binarySearch(int target, int[] nums) {
         int left = 0;
         int right = nums.length - 1;
 
@@ -153,7 +158,8 @@ public class Solution {
     }
 
     //solution2
-    //O(n)
+    //Time complexity : O(n + m)
+    // Space complexity : O(m+n)
     public static int[] intersection2(int[] arr1, int[] arr2) {
         HashSet<Integer> set1 = new HashSet<>();
         for (int n : arr1) {
@@ -171,7 +177,7 @@ public class Solution {
         }
     }
 
-    public static int[] find_intersection(HashSet<Integer> set1, HashSet<Integer> set2) {
+    private static int[] find_intersection(HashSet<Integer> set1, HashSet<Integer> set2) {
         int[] res = new int[set1.size()];
         int i = 0;
         for (int n : set1) {
@@ -193,7 +199,8 @@ public class Solution {
      * • 1 <= nums.length <= 5 * 104
      * • -109 <= nums[i] <= 109
      */
-    //O(n)
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
     public static List<Integer> majorityElement(int[] nums) {
 
         Integer c1 = null;
@@ -252,7 +259,9 @@ public class Solution {
      * • -109 <= nums[i] <= 109
      * • nums is a non-decreasing array. • -109 <= target <= 109
      */
-    // O(logn)
+
+    // Time Complexity: O(logn)
+    // Space Complexity: O(1)
     public static int[] searchRange(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
             return new int[] {-1, -1};
@@ -268,7 +277,7 @@ public class Solution {
         }
     }
     //Find the leftmost index
-    public static int findLeftIndex(int[] nums, int target) {
+    private static int findLeftIndex(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
         int leftMost = -1;
@@ -287,7 +296,7 @@ public class Solution {
         return leftMost;
     }
     //Find the rightmost index
-    public static int findRightIndex(int[] nums, int target) {
+    private static int findRightIndex(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
         int rightMost = -1;
@@ -323,7 +332,8 @@ public class Solution {
      */
 
     //solution1
-    //O(mlogn)
+    // Time Complexity: O(mlogn)
+    // Space Complexity: O(1)
     public static int countNegatives1(int[][] grid) {
         //binary search
         int res = 0;
@@ -348,7 +358,8 @@ public class Solution {
     }
 
     //solution2
-    //O(m+n)
+    // Time Complexity: O(m+n)
+    // Space Complexity: O(1)
     public static int countNegatives2(int[][] grid) {
         int cnt = 0;
         int i = 0;
@@ -381,7 +392,8 @@ public class Solution {
      • nums[i] != nums[i + 1] for all valid i.**/
 
     //binary search
-    //O(logn)
+    // Time Complexity: O(logn)
+    // Space Complexity: O(1)
     public static int findPeakElement(int[] nums) {
         if (nums.length == 1) {
             return 0;
@@ -413,7 +425,8 @@ public class Solution {
      two or more times.**/
 
      //solution1(binary search)
-     //O(nlogn)
+     // Time Complexity: O(nlogn)
+     // Space Complexity: O(1)
      public static int findDuplicate1(int[] nums) {
          int left = 1;
          int right = nums.length - 1;
@@ -436,7 +449,8 @@ public class Solution {
      }
 
     //solution2
-    //O(n)
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
      public static int findDuplicate2(int[] arr) {
          while (arr[0] != arr[arr[0]]) {
              int tmp = arr[arr[0]];
@@ -464,7 +478,8 @@ public class Solution {
      **/
 
      //solution1(binary search)
-     //O(logn)
+     // Time Complexity: O(logn)
+     // Space Complexity: O(1)
      public static int findKthPositive1(int[] arr, int k) {
          int left = 0;
          int right = arr.length - 1;
@@ -481,7 +496,8 @@ public class Solution {
      }
 
     //solution2
-    //O(n)
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
      public static int findKthPositive2(int[] arr, int k) {
          //brute force
          for (int i = 0; i < arr.length; i++) {
