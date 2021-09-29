@@ -25,7 +25,7 @@ public class Solutions {
      * .nums[i] is 0, 1, or 2.
      * @param arr
      */
-    // O(n)
+    //Time Complexity: O(n), Space Complexity: O(1)
     public static void question1(int[] arr) {
         int pivot = 1;
         int low = 0;
@@ -66,7 +66,7 @@ public class Solutions {
      * @param intervals
      * @return
      */
-    // O(nlogn)
+    // Time Complexity: O(nlogn) Space Complexity: O(1)
     public static boolean question2(ArrayList<Interval> intervals) {
         intervals.sort(new Comparator<Interval>() {
             @Override
@@ -101,11 +101,12 @@ public class Solutions {
      *  Constraints:
      * 1 <= n <= 104
      * nums.length == 2 * n
-     * -104 <= nums[i] <= 104
+     * -10^4 <= nums[i] <= 10^4
      * @param arr
      * @return
      */
-    //solution 1: O(nlogn)
+    //solution 1:
+    // Time Complexity: O(nlogn) Space Complexity: O(1)
     public static int question3Solution1(int[] arr) {
         Arrays.sort(arr);
         int maxSum = 0;
@@ -115,7 +116,8 @@ public class Solutions {
         return maxSum;
     }
 
-    //solution 2: O(n + m)
+    //solution 2:
+    // Time Complexity: O(n + m) Space Complexity: O(m)
     public static int question3Solution2(int[] arr) {
         int[] bucket = new int[20001];
         int maxNum = Integer.MIN_VALUE;
@@ -154,7 +156,8 @@ public class Solutions {
      *  -104 <= nums[i] <= 104
      * nums is sorted in non-decreasing order.
      */
-    //solution1: O(nlogn)
+    //solution1:
+    // Time Complexity: O(nlogn) Space Complexity: O(n)
     public static int[] question4Solution1(int[] nums) {
         int[] res = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
@@ -164,7 +167,8 @@ public class Solutions {
         return res;
     }
 
-    //solution2: O(n)
+    //solution2:
+    // Time Complexity: O(n) Space Complexity: O(n)
     public static int[] question4Solution2(int[] arr) {
         int n = arr.length;
         int[] res = new int[n];
@@ -197,7 +201,8 @@ public class Solutions {
      *   s and t consist of lowercase English letters.
      * @return
      */
-    //solution1: O(nlogn)
+    //solution1:
+    // Time Complexity: O(nlogn) Space Complexity: O(n)
     public static boolean question5Solution1(String s, String t) {
         if (s.length() != t.length()) {
             return false;
@@ -209,7 +214,8 @@ public class Solutions {
         return Arrays.equals(s1, s2);
     }
 
-    //solution2: O(n)
+    //solution2:
+    // Time Complexity: O(n) Space Complexity:  O(n)
     public static boolean question5Solution2(String s, String t) {
         if (s.length() != t.length()) {
             return false;
@@ -240,7 +246,8 @@ public class Solutions {
      * 0 <= nums[i] <= 5000*
      */
 
-   //solution1: O(n)
+    //solution1:
+    // Time Complexity: O(n) Space Complexity: O(1)
     public static int[] question6Solution1(int[] arr) {
         if (arr == null || arr.length <= 1) {
             return arr;
@@ -261,7 +268,8 @@ public class Solutions {
         return arr;
     }
 
-    //solution2: O(nlogn)
+    //solution2:
+    // Time Complexity: O(nlogn) Space Complexity: O(n)
     public static int[] question6Solution2(int[] arr) {
         Integer[] res = new Integer[arr.length];
         for (int i = 0; i < arr.length; i++)
