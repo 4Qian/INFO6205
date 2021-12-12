@@ -19,11 +19,8 @@ public class Solution {
             return true;
         }
         mirrorTree(node.left);
-
         boolean result = areIsoMorphic(node.left, node.right);
-
         mirrorTree(node.left);
-
         return result;
     }
 

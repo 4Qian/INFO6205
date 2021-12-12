@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-
     Map<Integer, Integer> indexMap;
     int[] levelOrder;
     int[] inOrder;
+
     public TreeNode constructTree(int[] inOrder, int[] levelOrder) {
         this.inOrder = inOrder;
         this.levelOrder = levelOrder;
@@ -37,10 +37,16 @@ public class Main {
     public static void main(String[] args) {
         int[] levelOrder = {1,2,3,4,5,6,7};
         int[] inOrder = {4,2,5,1,6,3,7};
+
+        int[] levelOrder1 = {};
+        int[] inOrder1 = {};
         Main question1 = new Main();
         TreeNode root = question1.constructTree(inOrder, levelOrder);
         System.out.println("---- print tree");
         printTreeInOrder(root); // {4,2,5,1,6,3,7}
+        System.out.println("========");
+        TreeNode root1 = question1.constructTree(inOrder1, levelOrder1);
+        printTreeInOrder(root1);
     }
 
     private static void printTreeInOrder(TreeNode root) {

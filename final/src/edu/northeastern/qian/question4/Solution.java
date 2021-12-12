@@ -41,6 +41,10 @@ public class Solution {
 
         String[] words1 = new String[] {"word","world","row"};
         String  order1 = "worldabcefghijkmnpqstuvxyz";
-        System.out.println(question4.alienOrder(words1, order1));// flase
+        System.out.println(question4.alienOrder(words1, order1));// false
+
+        String[] words2 = new String[] {"apple","app"};
+        String order2 = "abcdefghijklmnopqrstuvwxyz";
+        System.out.println(question4.alienOrder(words2, order2));// false
     }
 }
