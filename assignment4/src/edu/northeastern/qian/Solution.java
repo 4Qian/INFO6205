@@ -401,7 +401,7 @@ public class Solution {
                 }else if (poly1.power < poly2.power) {
                     cur.next = new PolyNode(poly2.coefficient, poly2.power);
                     poly2 = poly2.next;
-                }else{
+                }else{ 
                     // If the power of the two is the same, add the coefficient of the two nodes togetehr
                     int coef = poly1.coefficient + poly2.coefficient;
                     if (coef == 0) {
